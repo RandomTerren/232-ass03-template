@@ -48,8 +48,9 @@ void test_swap_basic(void)
 {
     int a = 5, b = 3;
     swap(&a, &b);
-    TEST_ASSERT_EACH_EQUAL_INT(int *aPtr);
-    TEST_ASSERT_EACH_EQUAL_INT(int *bPtr);
+    TEST_ASSERT_EQUAL(3, a);
+    TEST_ASSERT_EQUAL(5, b);
+
 }
 
 
