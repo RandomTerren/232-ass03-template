@@ -259,7 +259,11 @@ void test_swap_ptrs_values_unchanged(void)
 
 void test_nullify_sets_null(void)
 {
-    // TODO
+    int x = 5;
+    int *pPtr = &x;
+    TEST_ASSERT_NOT_NULL(pPtr);
+    nullify(&pPtr);
+    TEST_ASSERT_NULL(pPtr);
 }
 
 
@@ -274,7 +278,10 @@ void test_nullify_sets_null(void)
 
 void test_nullify_value_unchanged(void)
 {
-    // TODO
+    int x = 5;
+    int *pPtr = &x;
+    nullify(&pPtr);
+    TEST_ASSERT_EQUAL(5, x);
 }
 
 
