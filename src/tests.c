@@ -356,7 +356,11 @@ void test_sum_chain_basic(void)
 
 void test_sum_chain_single(void)
 {
-    // TODO
+    Node a;
+    a.value = 1;
+    a.nextPtr = NULL;
+    int theresult = sum_chain(&a);
+    TEST_ASSERT_EQUAL(1, theresult);
 }
 
 
@@ -369,5 +373,6 @@ void test_sum_chain_single(void)
 
 void test_sum_chain_null(void)
 {
-    // TODO
+    int theresult = sum_chain(NULL);
+    TEST_ASSERT_EQUAL(0, theresult);
 }
