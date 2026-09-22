@@ -98,7 +98,10 @@ void test_find_last_basic(void)
 
 void test_find_last_single(void)
 {
-    // TODO
+    char str[] = "e";
+    char *resultPtr = find_last_char(str);
+    TEST_ASSERT_EQUAL(str, resultPtr);
+    TEST_ASSERT_EQUAL('e', *resultPtr);
 }
 
 
