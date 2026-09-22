@@ -336,7 +336,13 @@ void test_assign_bytes_all(void)
 
 void test_sum_chain_basic(void)
 {
-    // TODO
+    Node a, b, c;
+    a.value = 1;
+    b.value = 2;
+    c.value = 3;
+    link_three(&a, &b, &c);
+    int theresult = sum_chain(&a);
+    TEST_ASSERT_EQUAL(6, theresult);
 }
 
 
