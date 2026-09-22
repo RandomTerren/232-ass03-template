@@ -315,7 +315,13 @@ void test_assign_bytes_first_and_last(void)
 
 void test_assign_bytes_all(void)
 {
-    // TODO
+    long long x = 0;
+    assign_bytes(&x);
+    unsigned char *bytes = (unsigned char *)&x;
+    for (int i = 0; i < 8; i++)
+    {
+        TEST_ASSERT_EQUAL(i + 1, bytes[i]);
+    }
 }
 
 
