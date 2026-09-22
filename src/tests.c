@@ -47,7 +47,7 @@ int   sum_chain(Node *headPtr);
 void test_swap_basic(void)
 {
     int a = 5, b = 3;
-        swap(&a, &b);
+    swap(&a, &b);
     TEST_ASSERT_EQUAL(3, a);
     TEST_ASSERT_EQUAL(5, b);
 
@@ -219,7 +219,12 @@ void test_remove_first_isolates(void)
 
 void test_swap_ptrs_redirects(void)
 {
-    // TODO
+    int a = 5, b = 3;
+    int *aPtr = &a;
+    int *bPtr = &b;
+    swap_ptrs(&aPtr, &bPtr);
+    TEST_ASSERT_EQUAL(&b, aPtr);
+    TEST_ASSERT_EQUAL(&a, bPtr);
 }
 
 
@@ -234,7 +239,12 @@ void test_swap_ptrs_redirects(void)
 
 void test_swap_ptrs_values_unchanged(void)
 {
-    // TODO
+    int a = 5, b = 3;
+    int *aPtr = &a;
+    int *bPtr = &b;
+    swap_ptrs(&aPtr, &bPtr);
+    TEST_ASSERT_EQUAL(5, a);
+    TEST_ASSERT_EQUAL(3, b);
 }
 
 
