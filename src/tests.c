@@ -64,10 +64,10 @@ void test_swap_basic(void)
 
 void test_swap_equal(void)
 {
-    char str[] = "hello";
-    char *resultPtr = find_last_char(str);
-    TEST_ASSERT_EQUAL(str + 4, resultPtr);
-    TEST_ASSERT_EQUAL('o', *resultPtr);
+    int a = 5, b = 5;
+    swap(&a, &b);
+    TEST_ASSERT_EQUAL(5, a);
+    TEST_ASSERT_EQUAL(5, b);
 }
 
 
@@ -81,7 +81,10 @@ void test_swap_equal(void)
 
 void test_find_last_basic(void)
 {
-    // TODO
+    char str[] = "hello";
+    char *resultPtr = find_last_char(str);
+    TEST_ASSERT_EQUAL(str + 4, resultPtr);
+    TEST_ASSERT_EQUAL('o', *resultPtr);
 }
 
 
