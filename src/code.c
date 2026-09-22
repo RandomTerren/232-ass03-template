@@ -78,10 +78,19 @@ void swap(int *aPtr, int *bPtr)
 //   Do NOT use array indexing [ ].
 // ============================================================
 
+// I used copilot to figure out the while loop. 
+
 char* find_last_char(char *sPtr)
 {
-    // TODO
-    return NULL;
+    if (*sPtr == '\0')
+    {
+        return NULL;
+    }
+    while (*(sPtr + 1) != '\0')
+    {
+        sPtr++;
+    }
+    return sPtr;
 }
 
 
