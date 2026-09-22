@@ -199,7 +199,13 @@ void test_remove_last_truncates(void)
 
 void test_remove_first_isolates(void)
 {
-    // TODO
+    Node a = {1};
+    Node b = {2};
+    Node c = {3};
+    link_three(&a, &b, &c);
+    remove_first(&a);
+    TEST_ASSERT_EQUAL(&c, b.nextPtr);
+    TEST_ASSERT_EQUAL(NULL, a.nextPtr);
 }
 
 
