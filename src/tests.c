@@ -296,7 +296,11 @@ void test_nullify_value_unchanged(void)
 
 void test_assign_bytes_first_and_last(void)
 {
-    // TODO
+    long long x = 0;
+    assign_bytes(&x);
+    unsigned char *bytes = (unsigned char *)&x;
+    TEST_ASSERT_EQUAL(1, bytes[0]);
+    TEST_ASSERT_EQUAL(8, bytes[7]);
 }
 
 
